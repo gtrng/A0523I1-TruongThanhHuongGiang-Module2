@@ -5,82 +5,241 @@ import java.util.Scanner;
 public class B2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhập số cần đọc");
-        int count = scanner.nextInt();
-        if (0<= count && count < 10) {
-            switch (count) {
+        System.out.print("Nhập số cần đọc: ");
+        int number = scanner.nextInt();
+        String result = "";
+
+        if (number >= 0 && number < 10) {
+            switch (number) {
                 case 0:
-                    System.out.println("zero");
+                    result = "zero";
                     break;
                 case 1:
-                    System.out.println("one");
+                    result = "one";
                     break;
                 case 2:
-                    System.out.println("two");
+                    result = "two";
                     break;
                 case 3:
-                    System.out.println("three");
+                    result = "three";
                     break;
                 case 4:
-                    System.out.println("four");
+                    result = "four";
                     break;
                 case 5:
-                    System.out.println("five");
+                    result = "five";
                     break;
                 case 6:
-                    System.out.println("six");
+                    result = "six";
                     break;
                 case 7:
-                    System.out.println("seven");
+                    result = "seven";
                     break;
                 case 8:
-                    System.out.println("eight");
+                    result = "eight";
                     break;
                 case 9:
-                    System.out.println("nine");
-                    break;
-                default:
-                    System.out.println("out of ability");
+                    result = "nine";
                     break;
             }
-        } else if (10 <= count && count < 20){
-            switch (count) {
-                case 10:
-                    System.out.println("ten");
+        } else if (number >= 10 && number < 20) {
+            int ones = number % 10;
+            switch (ones) {
+                case 0:
+                    result = "ten";
                     break;
-                case 11:
-                    System.out.println("eleven");
+                case 1:
+                    result = "eleven";
                     break;
-                case 12:
-                    System.out.println("twelve");
+                case 2:
+                    result = "twelve";
                     break;
-                case 13:
-                    System.out.println("thirteen");
+                case 3:
+                    result = "thirteen";
                     break;
-                case 14:
-                    System.out.println("fourteen");
+                case 4:
+                    result = "fourteen";
                     break;
-                case 15:
-                    System.out.println("fifteen");
+                case 5:
+                    result = "fifteen";
                     break;
-                case 16:
-                    System.out.println("sixteen");
+                case 6:
+                    result = "sixteen";
                     break;
-                case 17:
-                    System.out.println("seventeen");
+                case 7:
+                    result = "seventeen";
                     break;
-                case 18:
-                    System.out.println("eighteen");
+                case 8:
+                    result = "eighteen";
                     break;
-                case 19:
-                    System.out.println("nineteen");
-                    break;
-                default:
-                    System.out.println("out of ability");
+                case 9:
+                    result = "nineteen";
                     break;
             }
-        } else if (count >= 20){
+        } else if (number >= 20 && number < 100) {
+            int tens = number / 10;
+            int ones = number % 10;
+            String tensString = "";
+            String onesString = "";
 
+            switch (tens) {
+                case 2:
+                    tensString = "twenty";
+                    break;
+                case 3:
+                    tensString = "thirty";
+                    break;
+                case 4:
+                    tensString = "forty";
+                    break;
+                case 5:
+                    tensString = "fifty";
+                    break;
+                case 6:
+                    tensString = "sixty";
+                    break;
+                case 7:
+                    tensString = "seventy";
+                    break;
+                case 8:
+                    tensString = "eighty";
+                    break;
+                case 9:
+                    tensString = "ninety";
+                    break;
+            }
+
+            switch (ones) {
+                case 1:
+                    onesString = "one";
+                    break;
+                case 2:
+                    onesString = "two";
+                    break;
+                case 3:
+                    onesString = "three";
+                    break;
+                case 4:
+                    onesString = "four";
+                    break;
+                case 5:
+                    onesString = "five";
+                    break;
+                case 6:
+                    onesString = "six";
+                    break;
+                case 7:
+                    onesString = "seven";
+                    break;
+                case 8:
+                    onesString = "eight";
+                    break;
+                case 9:
+                    onesString = "nine";
+                    break;
+            }
+
+            result = tensString + " " + onesString;
+        } else if (number >= 100 && number < 1000) {
+            int hundreds = number / 100;
+            int tens = (number % 100) / 10;
+            int ones = (number % 100) % 10;
+            String hundredsString = "";
+            String tensString = "";
+            String onesString = "";
+
+            switch (hundreds) {
+                case 1:
+                    hundredsString = "one hundred";
+                    break;
+                case 2:
+                    hundredsString = "two hundred";
+                    break;
+                case 3:
+                    hundredsString = "three hundred";
+                    break;
+                case 4:
+                    hundredsString = "four hundred";
+                    break;
+                case 5:
+                    hundredsString = "five hundred";
+                    break;
+                case 6:
+                    hundredsString = "six hundred";
+                    break;
+                case 7:
+                    hundredsString = "seven hundred";
+                    break;
+                case 8:
+                    hundredsString = "eight hundred";
+                    break;
+                case 9:
+                    hundredsString = "nine hundred";
+                    break;
+            }
+
+            switch (tens) {
+                case 2:
+                    tensString = "twenty";
+                    break;
+                case 3:
+                    tensString = "thirty";
+                    break;
+                case 4:
+                    tensString = "forty";
+                    break;
+                case 5:
+                    tensString = "fifty";
+                    break;
+                case 6:
+                    tensString = "sixty";
+                    break;
+                case 7:
+                    tensString = "seventy";
+                    break;
+                case 8:
+                    tensString = "eighty";
+                    break;
+                case 9:
+                    tensString = "ninety";
+                    break;
+            }
+
+            switch (ones) {
+                case 1:
+                    onesString = "one";
+                    break;
+                case 2:
+                    onesString = "two";
+                    break;
+                case 3:
+                    onesString = "three";
+                    break;
+                case 4:
+                    onesString = "four";
+                    break;
+                case 5:
+                    onesString = "five";
+                    break;
+                case 6:
+                    onesString = "six";
+                    break;
+                case 7:
+                    onesString = "seven";
+                    break;
+                case 8:
+                    onesString = "eight";
+                    break;
+                case 9:
+                    onesString = "nine";
+                    break;
+            }
+
+            result = hundredsString + " " + tensString + " " + onesString;
+        } else {
+            result = "out of ability";
         }
+
+        System.out.println(number + ":" + result);
     }
 }
