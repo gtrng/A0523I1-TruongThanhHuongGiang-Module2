@@ -3,7 +3,7 @@ package ss2_Loop;
 import java.util.Scanner;
 
 public class B1 {
-    public static void hinhChuNhat() {
+    public static void rectangle() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 7; j++) {
                 System.out.print("*");
@@ -12,7 +12,7 @@ public class B1 {
         }
     }
 
-    public static void tamGiacVuong() {
+    public static void squareTriangle() {
         for (int i = 1; i <= 5; i++) {
             for (int j = 0; j < i; j++) {
                 System.out.print("*");
@@ -21,8 +21,7 @@ public class B1 {
         }
     }
 
-    public static void tamGiacVuong2() {
-        //tam giac vuong nguoc
+    public static void isoscelesTriangle() {
         for (int i = 7; i >= 1; i--) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
@@ -38,20 +37,20 @@ public class B1 {
                     "\n 2/Print the square triangle " +
                     "\n 3/Print isosceles triangle" +
                     "\n 4/Exit");
-            System.out.println("Nhap vao muc ban muon");
+            System.out.println("Choose one shape that you want to create :");
             int choose = sc.nextInt();
             switch (choose) {
                 case 1:
                     System.out.println("Thực hiện chức năng 1");
-                    hinhChuNhat();
+                    rectangle();
                     break;
                 case 2:
                     System.out.println("Thực hiện chức năng 2");
-                    tamGiacVuong();
+                    squareTriangle();
                     break;
                 case 3:
                     System.out.println("Thực hiện chức năng 3");
-                    tamGiacVuong2();
+                    isoscelesTriangle();
                     break;
                 default:
                     System.out.println("Thoát");
