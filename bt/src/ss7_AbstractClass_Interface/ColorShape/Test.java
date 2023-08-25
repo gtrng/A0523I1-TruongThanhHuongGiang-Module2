@@ -6,6 +6,7 @@ public class Test {
         for (int i =0; i < squares.length; i++){
             System.out.println("Square " +(i + 1));
             System.out.println("Area :" + squares[i].getArea());
+            System.out.println("Perimeter :" + squares[i].getPerimeter());
             System.out.println("How to color :" +((Square)squares[i]).howToColor());
         }
 
