@@ -40,6 +40,14 @@ public class Rectangle implements iResizeable {
     }
 
     @Override
+    public String toString() {
+        return "Rectangle{" +
+                "length=" + length +
+                ", width=" + width +
+                '}';
+    }
+
+    @Override
     public void resize(double percent) {
         width *= percent/100.0;
         length *= percent/100.0;
