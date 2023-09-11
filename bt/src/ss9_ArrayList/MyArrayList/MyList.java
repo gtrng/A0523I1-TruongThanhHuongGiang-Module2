@@ -1,7 +1,5 @@
-package ss9_ArrayList;
+package ss9_ArrayList.MyArrayList;
 
-import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Arrays;
 public class MyList<E> {
     private int size = 0;

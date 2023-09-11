@@ -1,4 +1,6 @@
-package ss9_ArrayList;
+package ss9_ArrayList.MyArrayList;
+
+import ss9_ArrayList.MyArrayList.MyList;
 
 public class MyListTest {
     public static void main(String[] args) {
