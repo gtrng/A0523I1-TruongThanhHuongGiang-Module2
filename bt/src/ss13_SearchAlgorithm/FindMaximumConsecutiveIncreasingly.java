@@ -1,7 +1,6 @@
 package ss13_SearchAlgorithm;
 
 import java.util.LinkedList;
-import java.util.Scanner;
 
 public class FindMaximumConsecutiveIncreasingly {
     public static void main(String[] args) {
