@@ -31,7 +31,7 @@ public class BinarySearch {
         int arr[] = new int[n];
         System.out.print("Nhập các phần tử của mảng:\n");
         for (int i = 0; i < n; i++) {
-            System.out.printf("a[%d] = ", i);
+            System.out.printf("arr[%d] = ", i);
             arr[i] = sc.nextInt();
         }
         System.out.println("Các phần tử của mảng:");
